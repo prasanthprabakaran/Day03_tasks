@@ -1,0 +1,72 @@
+
+1. For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+Ans:
+
+// JSON
+let student= {
+    name:"John doe",
+    age:21,
+    year:2022,
+    marks:{
+        science:92,
+        arts:91
+    },
+    attendance:['mon','tue','wed']
+};
+
+let res = Object.keys(student);
+// for loop
+console.log('for loop')
+for(let i=0;i<res.length;i++){
+    console.log(res[i],student[res[i]]);
+};
+
+// for in loop
+console.log('for-in loop');
+for (let i in student){
+    console.log(i,student[i]);
+};
+
+// for of loop
+console.log('for-of loop');
+for (const key of Object.keys(student)) {
+    console.log(key,student[key]);    
+};
+
+//forEach loop
+console.log('for-Each loop')
+Object.keys(student).forEach(key => {
+    console.log(key,student[key]);
+});
+
+
+2. Create your own resume data in JSON format
+
+const resume = {
+    'basics':{
+        'name': 'Prasanth',
+        'label': 'Full-Stack developer',
+        'email': 'iprasanthpraba@gmail.com',
+        'phone': '7010970748',
+	'DOB': 'July,1999'
+    },
+    'location': {
+        'country':'India',
+        'address': 'Villivakkam',
+        'city': 'Chennai'
+    },
+    'profiles': {
+        'network': 'Linkedin',
+        'Url': 'https://www.linkedin.com/in/prasanthprabakaran/',
+    },
+    'education': {
+        'Degree': 'Bsc.Computer Science',
+        'University': 'Jaya College of Arts and Science'
+    },
+    'Skills': {
+        'skill': ['HTML','CSS','Javascript','React','NodeJS']
+    },
+    'languages': ['Tamil','English']
+}
+
